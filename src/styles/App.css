@@ -1,0 +1,24 @@
+* {
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+}
+
+.Container {
+    background-color: #11072f;
+    color: white;
+    width: 75vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
