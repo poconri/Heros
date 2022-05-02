@@ -1,6 +1,22 @@
 .Liked{
     border: 1px solid #39266d;
-    width: 80%;
+    width: 1198px;
     border-radius: 15px;
 }
 
+.nav-heart {
+    padding-top: 2px;
+}
+
+.liked-heart{
+    height: 35px;
+}
+
+.HeroesBox {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

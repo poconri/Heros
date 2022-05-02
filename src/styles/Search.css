@@ -1,14 +1,23 @@
 .Search {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    gap: 51%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  width: 1198px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 580px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .subTittle {
-    padding-left: 10px;
-    display:inline;
-    white-space: nowrap;
+  padding-left: 10px;
+  display: inline;
+  white-space: nowrap;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  /* identical to box height */
+
+  letter-spacing: 0.725381px;
 }

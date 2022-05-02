@@ -1,19 +1,19 @@
 import React, {useEffect} from "react";
-import "../styles/App.css";
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchHeros, toggleFavorite } from "../actions";
+import { fetchHeros } from "../actions";
+import { SimpleGrid } from "@chakra-ui/react";
 import Logo from '../assets/logo/logo.svg';
 import Liked from "./Liked";
 import Search from "./Search";
 import Heroes from "./Heroes";
 import Loader from "../loader/Loader";
+import "../styles/App.css";
 
 const App = () => {
  
   const dispatch = useDispatch();
   const list = useSelector(state => state);
   const loading = useSelector(state => state.loading);
-  console.log(loading);
 
   useEffect(() => {
     dispatch(fetchHeros());

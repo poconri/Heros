@@ -1,11 +1,12 @@
 import { getSuperHeroService } from "../services/superHeroesService";
-import { SET_HEROS, SET_FAVORITE, SEARCH, SET_ERROR, CLEAR_ERROR, TOGGLE_LOADER } from "../actions/type";
+import { SET_HEROS, SET_FAVORITE, SEARCH, SET_ERROR, CLEAR_ERROR, TOGGLE_LOADER, RESET_HEROS } from "../actions/type";
 
 const initialState = {
     list: [],
     listB: [],
     error: '',
     loading: false,
+    favorites: []
 };
 
 const herosReducer = (state = initialState, action) => {
@@ -22,17 +23,17 @@ const herosReducer = (state = initialState, action) => {
                 list: state.list.map(hero =>
                     hero.id === action.payload.id ? { ...hero, isFavorite: !hero.isFavorite } : hero),
                 listB: state.listB.map(hero =>
-                    hero.id === action.payload.id ? { ...hero, isFavorite: !hero.isFavorite } : hero)
+                    hero.id === action.payload.id ? { ...hero, isFavorite: !hero.isFavorite } : hero),
+                favorites: state.favorites.includes(action.payload.id) ? state.favorites.filter(id => id !== action.payload.id) : [...state.favorites, action.payload.id]
             };
         case SEARCH:
-            const filteredHeroes = state.list.filter(hero =>
+            let filteredHeroes = {list: state.listB};
+            filteredHeroes = filteredHeroes.list.filter(hero =>
                 hero.name.toLowerCase().includes(action.payload.toLowerCase()));
-                console.log(filteredHeroes);
-                console.log('state liust',filteredHeroes);
+
                 return {
                   ...state,
-                  filteredHeroes,
-                  //listB: savedPokemons
+                  list: filteredHeroes,
                 };
         case SET_ERROR:
             return {
