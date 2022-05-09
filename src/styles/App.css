@@ -1,0 +1,33 @@
+* {
+    padding:0;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+  }
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #2a1b57 #11072f;
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 11px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #11072f;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #2a1b57;
+    border-radius: 10px;
+    border: 0px none #ffffff;
+  }
+  
+  body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+  
+  }

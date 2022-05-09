@@ -29,6 +29,7 @@ export interface IHero {
     slug: string,
     work: object,
     isFavorite?: boolean
+    lastFavorite?: boolean
 }
 
 export interface CompleteState {
